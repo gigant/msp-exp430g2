@@ -33,8 +33,8 @@ void msp_init(void)
   unsigned int i;
   for (i = 0; i < 10000; i++);
   if (IFG1&&OFIFG)   for (i = 0; i < 10000; i++);
-  BCSCTL2 |=SELM1+SELM0;
-  
+  BCSCTL2 |=SELM0;//+SELM1;
+  for (i = 0; i < 10000; i++);
 }
 
 /*
